@@ -1,12 +1,12 @@
 ---
 title: "Claude Code Personal Config (Gojo Edition)"
-description: "My personal Claude Code configuration featuring automated safety guardrails, custom lifecycle hooks, and a Gojo Satoru persona."
+description: "My personal Claude Code configuration"
 tags: [reference, workflows, automation, persona, security]
 ---
 
 # Claude Code Personal Config (Gojo Edition)
 
-This repository contains my personal Claude Code configuration. It is designed to fully automate my web development workspace while maintaining a fun, customized **Gojo Satoru best-friend persona**. 
+This repository contains my personal Claude Code configuration- customized **Gojo Satoru best-friend persona**. 
 
 The configuration includes safety guardrails, session telemetry, terminal audio feedback, and multiple slashed commands for specialized chatting modes (Telugu-English mix).
 
@@ -14,7 +14,7 @@ The configuration includes safety guardrails, session telemetry, terminal audio 
 
 | Folder/File | Description | Count |
 |--------|-------------|-------|
-| [`six-eyes-analysis.md`](./six-eyes-analysis.md) | Persona and ambition tracking for Soni | 1 |
+| [`six-eyes-analysis.md`](./six-eyes-analysis.md) | Persona and ambition tracking | 1 |
 | [`.claude/settings.json`](./.claude/settings.json) | Central configuration defining all Claude lifecycle hooks | 1 |
 | [`.claude/commands/`](./.claude/commands/) | Custom slash commands defining Gojo personas & actions | 9 |
 | [`.claude/hooks/`](./.claude/hooks/) | Event-driven security, telemetry, and shell scripts | 5 |
