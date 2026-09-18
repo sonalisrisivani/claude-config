@@ -12,6 +12,15 @@
     ],
     "PreToolUse": [
       {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash .claude/hooks/guardrails.sh"
+          }
+        ]
+      },
+      {
         "matcher": ".*",
         "hooks": [
           {
@@ -21,12 +30,33 @@
         ]
       }
     ],
+    "PostToolUse": [
+      {
+        "matcher": ".*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash .claude/hooks/post-tool-tracker.sh"
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash .claude/hooks/message-ding.sh"
+          }
+        ]
+      }
+    ],
     "UserPromptSubmit": [
       {
         "hooks": [
           {
             "type": "command",
-            "command": "echo '{\"systemMessage\": \"Prompt received: '\"$(cat -)\"'\"}'"
+            "command": "jq -n --arg msg \"$(cat)\" '{systemMessage: (\"Prompt received: \" + $msg)}'"
           }
         ]
       }
