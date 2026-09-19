@@ -23,3 +23,7 @@ session-stats.json
 # Task log and execution plans (machine-local, not for version control)
 tasks/task-log.jsonl
 tasks/plans/
+
+# Allowlist buffer pending suggestions (machine-local)
+.claude/allowlist-pending.jsonl
+

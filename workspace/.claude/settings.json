@@ -42,6 +42,10 @@
           {
             "type": "command",
             "command": "bash .claude/hooks/guardrails.sh"
+          },
+          {
+            "type": "command",
+            "command": "bash .claude/hooks/allowlist-buffer.sh"
           }
         ]
       },
@@ -62,6 +66,15 @@
           {
             "type": "command",
             "command": "bash .claude/hooks/log-daily-stats.sh"
+          }
+        ]
+      },
+      {
+        "matcher": "Write|Edit|Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash .claude/hooks/auto-update-readme.sh"
           }
         ]
       }
